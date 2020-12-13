@@ -33,4 +33,12 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
     add(element);
     return get(index);
   }
+
+  public OrderedArrayList(){
+    super();
+  }
+
+  public OrderedArrayList(int startingCapacity){
+    super(startingCapacity);
+  }
 }
