@@ -10,4 +10,19 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
     return index;
   }
 
+  public boolean add(T element){
+    if(element == null){
+      throw new IllegalArgumentException("Element is null");
+    }
+    super.add(findIndex(element), element);
+    return true;
+  }
+
+  public void add(int index, T element){
+    if(element == null){
+      throw new IllegalArgumentException("Element is null");
+    }
+    super.add(findIndex(element), element);
+  }
+
 }
