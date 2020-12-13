@@ -4,12 +4,12 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
     if(element == null){
       throw new IllegalArgumentException("Element is null");
     }
-      int index = 0;
-      for (int i = 0; i < size(); i++){
-        if(element.compareTo(get(index + 1)) > 0){
-          index ++;
-        }
+    int index = 0;
+    for (int i = 0; i < size()-1; i++){
+      if(element.compareTo(get(index + 1)) > 0){
+        index ++;
       }
+    }
     return index;
   }
 
