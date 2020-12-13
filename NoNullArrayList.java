@@ -1,26 +1,33 @@
+import java.util.ArrayList;
 public class NoNullArrayList<T> extends ArrayList<T>{
 
-  public void add(T element){
-    if(element = null){
+  public boolean add(T element){
+    if(element == null){
       throw new IllegalArgumentException("Element is null");
     }
-    super.add(element);
+    return super.add(element);
   }
 
   public void add(int index, T element){
-    if(element = null){
+    if(element == null){
       throw new IllegalArgumentException("Element is null");
     }
     super.add(index, element);
   }
 
-  public void set(int index, T element){
-    if(element = null){
+  public T set(int index, T element){
+    if(element == null){
       throw new IllegalArgumentException("Element is null");
     }
-    super.set(index, element);
+    return super.set(index, element);
   }
 
-  
+  public NoNullArrayList(){
+    super();
+  }
+
+  public NoNullArrayList(int startingCapacity){
+    super(startingCapacity);
+  }
 
 }
