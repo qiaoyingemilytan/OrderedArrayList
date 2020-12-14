@@ -32,9 +32,10 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
     if(element == null){
       throw new IllegalArgumentException("Element is null");
     }
+    T temp = get(index);
     remove(index);
     add(element);
-    return get(index);
+    return temp;
   }
 
   public OrderedArrayList(){
